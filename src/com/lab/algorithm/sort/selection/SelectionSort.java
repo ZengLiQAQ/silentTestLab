@@ -18,13 +18,27 @@ public class SelectionSort {
      * @param array
      */
     public static void selectionSort(int[] array){
-
+        int minIndex,temp;
+        int len = array.length;
+        for (int i = 0; i < len - 1; i++) {
+            minIndex = i;
+            for (int j = i + 1; j < len; j++) {
+                // 寻找最小的数
+                if (array[j] < array[minIndex]) {
+                    // 将最小数的索引保存
+                    minIndex = j;
+                }
+            }
+            temp = array[i];
+            array[i] = array[minIndex];
+            array[minIndex] = temp;
+        }
     }
 
 
     public static void main(String[] args) {
         //测试数组
-        int[] array = new int[]{1,2,4,6,3,7,5,12,9,8};
+        int[] array = new int[]{6,1,2,4,3,9,7,5,12,8};
         System.out.println(JSONObject.toJSONString(array));
         selectionSort(array);
         System.out.println(JSONObject.toJSONString(array));
