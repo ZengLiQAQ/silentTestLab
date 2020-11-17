@@ -13,7 +13,7 @@ import com.alibaba.fastjson.JSONObject;
  **/
 public class InsertionSort {
 
-    public static void insertionSort(int[] array){
+    public static int[] insertionSort(int[] array){
         int len = array.length;
         int preIndex, current;
         for (int i = 1; i < len; i++) {
@@ -26,6 +26,7 @@ public class InsertionSort {
             }
             array[preIndex+1] = current;
         }
+        return array;
     }
 
 
