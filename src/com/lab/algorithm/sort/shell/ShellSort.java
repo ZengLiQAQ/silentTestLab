@@ -1,10 +1,7 @@
-package sortdemo;
+package com.lab.algorithm.sort.shell;
 
 import java.util.Arrays;
 
-/**
- * Created by chengxiao on 2016/11/24.
- */
 public class ShellSort {
     /**
      * 希尔排序 针对有序序列在插入时采用交换法
