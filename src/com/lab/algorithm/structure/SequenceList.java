@@ -14,4 +14,9 @@ public class SequenceList {
     private Object[] data;
     //
     private int index;
+
+    public static void main(String[] args) {
+        int i = 11%3;
+        System.out.println(i);
+    }
 }

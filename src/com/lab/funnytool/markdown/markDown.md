@@ -30,23 +30,22 @@
 ### 链接
 在 Markdown 中，插入链接不需要其他按钮，你只需要使用 [显示文本](链接地址) 这样的语法即可，例如：
 ```markdown
-[简书](http://www.jianshu.com)
+[百度](http://www.baidu.com)
 ```
 ### 图片
 在 Markdown 中，插入图片不需要其他按钮，你只需要使用 ![](图片链接地址) 这样的语法即可，例如：
-![图标](http://static.runoob.com/images/runoob-logo.png)
-![图标](http://static.runoob.com/images/runoob-logo.png "RUNOOB")
+![图标](https://profile.csdnimg.cn/9/8/E/3_qq_37107280)
 
 ```markdown
-![](http://upload-images.jianshu.io/upload_images/259-0ad0d0bfc1c608b6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://profile.csdnimg.cn/9/8/E/3_qq_37107280)
 ```
 
 #### 设置图片的宽高
 Markdown 还没有办法指定图片的高度与宽度，如果你需要的话，你可以使用普通的 <img> 标签。
 ```markdown
-<img src="http://static.runoob.com/images/runoob-logo.png" width="50%">
+<img src="https://profile.csdnimg.cn/9/8/E/3_qq_37107280" width="10%">
 ```
-<img src="http://static.runoob.com/images/runoob-logo.png" width="50%"><br><br>
+<img src="https://profile.csdnimg.cn/9/8/E/3_qq_37107280" width="10%"><br><br>
 
 ### 相对路径图片
 相对路径通常在表示图片、网页等位置时需要用到，相比于绝对路径更不容易出错。
@@ -94,7 +93,7 @@ public class Test{
  }
 }
 ```
-## 表格
+## 表格(IDEA 的markDown中,可能不支持,如有需要建议使用专业markDown工具)
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|

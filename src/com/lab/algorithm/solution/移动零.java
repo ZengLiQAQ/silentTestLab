@@ -4,6 +4,9 @@ package com.lab.algorithm.solution;/**
 
 import com.alibaba.fastjson.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 /**
  * @ClassName 移动零
