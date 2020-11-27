@@ -23,7 +23,7 @@ import com.lab.algorithm.structure.ListNode;
  * @Date 2020/11/18 16:01
  * @VerSion 1.0
  **/
-public class 两数相加 {
+public class Solution2 {
 
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

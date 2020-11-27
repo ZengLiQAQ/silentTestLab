@@ -4,8 +4,7 @@ package com.lab.algorithm.solution;/**
 
 import com.alibaba.fastjson.JSONObject;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
 
 
 /**
@@ -28,7 +27,7 @@ import java.util.Map;
  *  leetCode解题思路: https://leetcode-cn.com/problems/move-zeroes/solution/dong-hua-yan-shi-283yi-dong-ling-by-wang_ni_ma/
  * @VerSion 1.0
  **/
-public class 移动零 {
+public class Solution283 {
     public static void moveZeroes(int[] nums) {
         int length;
         if (nums == null || (length = nums.length) == 0) {
