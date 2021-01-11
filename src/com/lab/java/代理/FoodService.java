@@ -1,4 +1,4 @@
-package com.lab.java.代理.JDK动态代理;/**
+package com.lab.java.代理;/**
  * Created by zengli on 2021/1/11.
  */
 

@@ -1,9 +1,6 @@
-package com.lab.java.代理.JDK动态代理;/**
+package com.lab.java.代理;/**
  * Created by zengli on 2021/1/11.
  */
-
-import com.lab.java.代理.FoodService;
-import com.lab.java.代理.FoodServiceImpl;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
