@@ -17,7 +17,7 @@ import java.util.Queue;
 public class Solution226 {
 
     /**
-     * 深度优先: 递归
+     * 深度优先DFS: 递归
      * 确定可重复执行元素: node, left = right ; right = left
      *
      */
@@ -34,7 +34,7 @@ public class Solution226 {
     }
 
     /**
-     * 广度优先: 迭代 需要临时变量
+     * 广度优先BFS: 迭代 需要临时变量
      * 每次跌点当前层的左右子树,并交换对应的位置
      *
      */

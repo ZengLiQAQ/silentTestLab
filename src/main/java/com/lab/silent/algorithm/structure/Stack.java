@@ -12,7 +12,7 @@ public class Stack<E> {
     private int top = -1;
 
     //构造函数
-    Stack() {
+    public Stack() {
         this(10);
     }
 
@@ -24,6 +24,10 @@ public class Stack<E> {
         } else {
             throw new RuntimeException("初始化大小不能小于0:" + initialSize);
         }
+    }
+
+    public boolean empty(){
+        return data == null || data.length == 0;
     }
 
     //入栈
@@ -46,7 +50,7 @@ public class Stack<E> {
 
     //查询栈顶元素
     public E peek(){
-        if (top == -1) throw  new RuntimeException("空栈");
+        if (top == -1){ throw  new RuntimeException("空栈");}
         return (E)data[top];
     }
 }

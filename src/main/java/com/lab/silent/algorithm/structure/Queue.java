@@ -28,10 +28,18 @@ public class Queue<E> {
         }
     }
 
+    public boolean empty(){
+        return data == null || data.length == 0;
+    }
+
+    public int size(){
+        return data == null ? 0:data.length;
+    }
+
     //在队尾插入数据(入队)
     public boolean add(E e) {
         if (rear == maxSize) {
-            throw new RuntimeException("队列已满,无法插入心得元素!");
+            throw new RuntimeException("队列已满,无法插入新元素!");
         } else {
             data[rear++] = e;
             return true;
@@ -39,7 +47,7 @@ public class Queue<E> {
     }
 
 
-    //删除对头元素,出队
+    //删除头元素,出队
     public E poll() {
         if (data.length == 0) {
             throw new RuntimeException("空队列");
