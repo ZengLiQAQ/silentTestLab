@@ -12,6 +12,7 @@ public class Problem_11_MinDistance {
 		if (str1.equals(str2)) {
 			return 0;
 		}
+		"".indexOf("");
 		int last1 = -1;
 		int last2 = -1;
 		int min = Integer.MAX_VALUE;

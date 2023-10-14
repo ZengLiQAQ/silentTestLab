@@ -330,8 +330,28 @@ public class SolutionTemplate {
         }
         return ans;
     }
+    public static int lengthOfLongestSubstring(String s) {
+        //记录各个字符位置
+        Map<Character,Integer> map = new HashMap<Character,Integer>();
+        int left = 0;
+        int ans = 0;
+        for(int right = 0;right < s.length(); right++){
+            char c = s.charAt(right);
+            if(map.containsKey(c)){
+                //左窗口右移到对应字符位置
+                left = Math.max(left,map.get(c));
+            }
+            map.put(c,right);
+            ans = Math.max(ans,map.getOrDefault(c,0) - left);
+        }
+        return ans;
+    }
 
-
+    public static void main(String[] args) {
+        String s = "abcabcdfgggj";
+        int ans = lengthOfLongestSubstring(s);
+        System.out.println(ans);
+    }
 
 
 
