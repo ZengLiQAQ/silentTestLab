@@ -23,7 +23,7 @@ import com.lab.silent.algorithm.structure.ListNode;
  * @Date 2020/11/18 16:01
  * @VerSion 1.0
  **/
-public class Solution2 {
+public class 两数相加_leetCode2 {
 
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

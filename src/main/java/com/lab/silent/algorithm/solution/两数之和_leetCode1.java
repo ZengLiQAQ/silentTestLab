@@ -25,7 +25,7 @@ import java.util.Map;
  * 解题思路:
  * @VerSion 1.0
  **/
-public class Solution1 {
+public class 两数之和_leetCode1 {
 
     /**
      * 解题思路:

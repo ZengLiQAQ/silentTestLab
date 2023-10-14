@@ -18,10 +18,10 @@ import com.lab.silent.algorithm.structure.ListNode;
  * @Date 2020/11/26 17:37
  * @VerSion 1.0
  **/
-public class Solution206 {
+public class 链表反转_leetCode206 {
 
     /**
-     * 迭代:
+     * 迭代(双指针):
      * 遍历链表: 将当前节点的 next 指针改为指向前一个元素。由于节点没有引用其上一个节点
      * 因此必须事先存储其前一个元素。在更改引用之前，还需要另一个指针来存储下一个节点。
      * 不要忘记在最后返回新的头引用！

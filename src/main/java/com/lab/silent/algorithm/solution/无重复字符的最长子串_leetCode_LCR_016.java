@@ -5,12 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author gouqi
- * @version 1.0
- * @description:
- * @date 2023/9/26 14:34
+ * 给定一个字符串 s ，请你找出其中不含有重复字符的 最长连续子字符串 的长度。
  */
-public class LCRSolution016 {
+public class 无重复字符的最长子串_leetCode_LCR_016 {
 
   private static int lengthOfLongestStr(String s ){
       Map<Character,Integer> map = new HashMap<>();
@@ -34,7 +31,7 @@ public class LCRSolution016 {
 
     public static void main(String[] args) {
         String str = "abcdeef";
-        int s = LCRSolution016.lengthOfLongestStr(str);
+        int s = 无重复字符的最长子串_leetCode_LCR_016.lengthOfLongestStr(str);
         System.out.println(s);
     }
 }
