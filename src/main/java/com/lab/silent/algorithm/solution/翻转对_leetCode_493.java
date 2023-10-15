@@ -25,7 +25,7 @@ package com.lab.silent.algorithm.solution;/**
  * @Date 2020/11/28 14:02
  * @VerSion 1.0
  **/
-public class Solution493 {
+public class 翻转对_leetCode_493 {
     //思路:
     //数组的计算,可以借助map来优化
     //1.遍历nums,依次和后续的元素比较,一直到nums.length -2 即截止
@@ -45,7 +45,7 @@ public class Solution493 {
 
     public static void main(String[] args) {
         int[] nums = {2147483647,2147483647,2147483647,2147483647,2147483647,2147483647};
-        Solution493 solution = new Solution493();
+        翻转对_leetCode_493 solution = new 翻转对_leetCode_493();
         int result = solution.reversePairs(nums);
         System.out.println(result);
     }

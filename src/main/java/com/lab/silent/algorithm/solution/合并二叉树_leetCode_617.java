@@ -17,7 +17,7 @@ import java.util.LinkedList;
  * @Date 2020/11/27 9:50
  * @VerSion 1.0
  **/
-public class Solution617 {
+public class 合并二叉树_leetCode_617 {
     /**
      * 二叉树类问题主要从两个角度考虑: 深度优先--> 递归, 广度优先 --> 迭代
      * 递归思路: 1.拆解可重复执行元素

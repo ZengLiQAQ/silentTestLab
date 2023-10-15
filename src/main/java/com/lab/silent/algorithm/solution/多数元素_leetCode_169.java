@@ -26,7 +26,7 @@ import java.util.Map;
  * @Date 2020/11/26 16:28
  * @VerSion 1.0
  **/
-public class Solution169 {
+public class 多数元素_leetCode_169 {
 
     public static int majorityElement(int[] nums) {
         //定义map: key: nums元素, value: 该元素出现的次数

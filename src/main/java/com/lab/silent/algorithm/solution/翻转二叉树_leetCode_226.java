@@ -14,7 +14,7 @@ import java.util.Queue;
  * @Date 2020/11/27 16:17
  * @VerSion 1.0
  **/
-public class Solution226 {
+public class 翻转二叉树_leetCode_226 {
 
     /**
      * 深度优先DFS: 递归

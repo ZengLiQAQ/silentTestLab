@@ -29,7 +29,7 @@ import java.util.Map;
  * @Date 2020/11/27 16:43
  * @VerSion 1.0
  **/
-public class Solution454 {
+public class 四数相加2_leetCode454 {
 
     /**
      * 题目分析:
@@ -118,7 +118,7 @@ public class Solution454 {
     }
 
     public static void main(String[] args) {
-        Solution454 solution = new Solution454();
+        四数相加2_leetCode454 solution = new 四数相加2_leetCode454();
         int[] A = {-1, 1};
         int[] B = {-1, 1};
         int[] C = {-1, 1};

@@ -25,7 +25,7 @@ import com.alibaba.fastjson.JSONObject;
  *  leetCode解题思路: https://leetcode-cn.com/problems/move-zeroes/solution/dong-hua-yan-shi-283yi-dong-ling-by-wang_ni_ma/
  * @VerSion 1.0
  **/
-public class Solution283 {
+public class 移动零_leetCode_283 {
     public static void moveZeroes(int[] nums) {
         int length;
         if (nums == null || (length = nums.length) == 0) {
