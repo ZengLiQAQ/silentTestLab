@@ -59,12 +59,25 @@ public class 两数之和_leetCode1 {
         }
         return resultCount > 0 ? result.get(0):new int[0];
     }
-
+    //核心思路： 通过Map的方式来保存对应的值及下标
+    public static int[] twoSums(int[] nums, int target) {
+        Map<Integer,Integer> map = new HashMap<>(nums.length);
+        int[] ans = new int[2];
+        for(int i=0;i<nums.length;i++){
+            if(map.containsKey(target-nums[i])){
+                ans[0] = i;
+                ans[1] = map.get(target-nums[i]);
+                return ans;
+            }
+            map.put(nums[i],i);
+        }
+        throw new IllegalArgumentException("not find");
+    }
 
     public static void main(String[] args) {
 
-        int[] nums = {2,5,4,1,3};
-        int[] result = twoSum(nums,5);
+        int[] nums = {2,7,11,15};
+        int[] result = twoSums(nums,9);
         System.out.println(JSONObject.toJSONString(nums));
         System.out.println(JSONObject.toJSONString(result));
     }
