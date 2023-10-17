@@ -27,8 +27,26 @@ public class 两数相加_leetCode2 {
 
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-
-        return null;
+        ListNode pre = new ListNode(0); // 创建一个新的链表，pre是其虚拟头节点
+        ListNode cur = pre; // 创建一个指针cur，指向当前处理的节点
+        int carry = 0; // carry表示进位
+        while(l1 != null || l2 != null) { // 当l1或l2不为空时，进入循环
+            int x = l1 == null ? 0 : l1.val; // 如果l1不为空，取l1的值，否则取0
+            int y = l2 == null ? 0 : l2.val; // 如果l2不为空，取l2的值，否则取0
+            int sum = x + y + carry; // 计算当前位的和
+            carry = sum / 10; // 更新进位
+            sum = sum % 10; // 计算当前位的值
+            cur.next = new ListNode(sum); // 创建一个新的节点，值为sum，然后将cur的next指向这个新节点
+            cur = cur.next; // 将cur向后移动一位
+            if(l1 != null)
+                l1 = l1.next; // 如果l1不为空，将l1向后移动一位
+            if(l2 != null)
+                l2 = l2.next; // 如果l2不为空，将l2向后移动一位
+        }
+        if(carry == 1) { // 如果最后还有进位
+            cur.next = new ListNode(carry); // 创建一个新的节点，值为carry，然后将cur的next指向这个新节点
+        }
+        return pre.next; // 返回结果链表的头节点
     }
 
 
