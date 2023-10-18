@@ -37,7 +37,6 @@ public class Stack<E> {
         }
         data[++top] = e;
         return true;
-
     }
 
     //出栈

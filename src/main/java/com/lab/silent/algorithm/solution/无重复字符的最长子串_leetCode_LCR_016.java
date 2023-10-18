@@ -31,7 +31,7 @@ public class 无重复字符的最长子串_leetCode_LCR_016 {
 
     /**
      * LCR 016. 无重复字符的最长子串
-     *  双指针 + set(统计是否重复)
+     *  双指针 + map(统计是否重复)
      * @param s
      * @return
      */
