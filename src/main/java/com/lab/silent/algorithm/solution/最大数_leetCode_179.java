@@ -43,6 +43,7 @@ public class 最大数_leetCode_179 {
         }
         //对字符串进行排序,
         Arrays.sort(arr,new Comparator<String>(){
+            @Override
             public int compare(String a,String b){
                 String ab = a + b;
                 String ba = b + a;
