@@ -42,7 +42,7 @@ public class 链表反转_leetCode206 {
             curr.next = prev;
             //将当前元素置为下一个元素的前一个元素
             prev = curr;
-            //将下一个节点设置为当前节点
+            //将下一个节点设置为当前节点,移动指针
             curr = nextTmp;
         }
         return prev;
