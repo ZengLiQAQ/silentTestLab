@@ -63,6 +63,9 @@ public class 最大数_leetCode_179 {
     }
 
     public static void main(String[] args) {
+        char a = "11".charAt(1);
+        System.out.println(Integer.valueOf(a));
+        System.out.println(Integer.valueOf(String.valueOf(a)));
         int[] arr = {30,32,89,12,23,0};
         String ss = largestNumber(arr);
         System.out.println(ss);
