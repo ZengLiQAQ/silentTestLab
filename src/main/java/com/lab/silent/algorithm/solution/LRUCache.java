@@ -25,6 +25,16 @@ public class LRUCache {
             this.key = key;
             this.val = val;
         }
+
+        @Override
+        public String toString() {
+            return "DLinkedNode{" +
+                    "key=" + key +
+                    ", val=" + val +
+                    ", prev.key=" + (prev == null ? null:prev.key) +
+                    ", next.key=" + (next == null ? null:next.key) +
+                    '}';
+        }
     }
 
     private Map<Integer,DLinkedNode> cache = new HashMap<>();
