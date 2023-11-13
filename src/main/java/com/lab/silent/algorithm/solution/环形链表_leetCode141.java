@@ -51,4 +51,27 @@ public class 环形链表_leetCode141 {
         }
         return true;
     }
+
+    /**
+     * 判断链表是否存在环
+     * @param head
+     * @return
+     */
+    public boolean hasCycle3(ListNode head){
+        if(head == null){
+            return  false;
+        }
+        ListNode slow = head , fast = head.next;
+        while (slow != fast){
+            if(fast == null && fast.next == null){
+                return  false;
+            }
+            //移动指针
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return true;
+    }
+
+
 }
