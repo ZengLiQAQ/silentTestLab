@@ -62,13 +62,4 @@ public class A_汇总练习 {
         }
         return sec.val;
     }
-
-
-    public int kthToLast(ListNode head, int k)
-
-
-
-
-
-
 }
