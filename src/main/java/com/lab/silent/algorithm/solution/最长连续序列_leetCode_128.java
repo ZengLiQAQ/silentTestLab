@@ -2,6 +2,7 @@ package com.lab.silent.algorithm.solution;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.HashMap;
 
 /**
  * 给定一个未排序的整数数组 nums ，找出数字连续的最长序列（不要求序列元素在原数组中连续）的长度。
@@ -57,9 +58,25 @@ public class 最长连续序列_leetCode_128 {
     }
 
     public static void main(String[] args) {
-//        int[] nums = {100,4,200,1,3,2};
-        int[] nums = {1,2,0,1};
-        int a = longestConsecutive(nums);
+        int[] nums = {100,4,200,1,3,2};
+//        int[] nums = {1,2,0,1};
+        int a = longestConsecutive2(nums);
         System.out.println(a);
+    }
+
+    public static int longestConsecutive2(int[] nums) {
+        //纪录理论上下一个最长序列的值
+        HashMap<Integer,Integer> map = new HashMap<>();
+        int maxLen = 0;
+        for(int i = 0;i < nums.length; i++){
+            int n = nums[i];
+            if(map.containsKey(n)){
+                maxLen = Math.max(maxLen,map.get(n)) + 1;
+                map.put(n,maxLen);
+            }else{
+                map.put(n,0);
+            }
+        }
+        return maxLen;
     }
 }

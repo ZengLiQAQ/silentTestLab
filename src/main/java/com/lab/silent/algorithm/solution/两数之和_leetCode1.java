@@ -74,6 +74,20 @@ public class 两数之和_leetCode1 {
         throw new IllegalArgumentException("not find");
     }
 
+    //暴力解法
+    public int[] twoSum3(int[] nums, int target) {
+        int[] ans = new int[2];
+        for(int i=0; i<nums.length; i++){
+            for(int j=nums.length - 1 ; j > i; j--){
+                if(nums[i] + nums[j] == target){
+                    ans[0] = i;
+                    ans[1] = j;
+                    return ans;
+                }
+            }
+        }
+        return null;
+    }
     public static void main(String[] args) {
 
         int[] nums = {2,7,11,15};
