@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @author gouqi
  * @version 1.0
- * @description: 超高出现频率题-9次
+ * @description: 超高出现频率题
  * 数组中的第K个最大元素(简单的方式是利用Arrays.sort()方法，然后取第k个元素，时间复杂度为O(nlogn)，空间复杂度为O(1))
  * 实际考察的是快速排序的思想及手写快速排序
  * @date 2024/1/10 23:37
