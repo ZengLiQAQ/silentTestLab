@@ -1,6 +1,9 @@
 package com.lab.silent.algorithm.byteDanceSpecialty;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
 /**
  * @author gouqi
@@ -110,15 +113,46 @@ public class MyTest_215 {
         }
         //将nums排序
         Arrays.sort(nums);
-        int cur = 1;
-        //从后向前遍历nums
-        for (int i = nums.length - 1; i >= 0; i--) {
-            if (cur == k) {
-                return nums[i];
-            }
-            cur++;
-        }
-        return  -1;
+        return  nums[nums.length-k];
     }
+
+
+    /**
+     *  利用快速选择加分治的实现方式
+     * @param nums
+     * @param k
+     * @return
+     */
+        private int quickSelect(List<Integer> nums, int k) {
+            // 随机选择基准数
+            int pivot = nums.get(new Random().nextInt(nums.size()));
+            // 将大于、小于、等于 pivot 的元素划分至 big, small, equal 中
+            List<Integer> big = new ArrayList<>(),equal = new ArrayList<>(),small = new ArrayList<>();
+            //根据大小划分大中小三种不同的数据范围的数据分组中
+            for (int num : nums) {
+                if (num > pivot)
+                    big.add(num);
+                else if (num < pivot)
+                    small.add(num);
+                else
+                    equal.add(num);
+            }
+            // 第 k 大元素在 big 中，递归划分
+            if (k <= big.size())
+                return quickSelect(big, k);
+            // 第 k 大元素在 small 中，递归划分,只需要用k-big的size即可
+            if (nums.size() - small.size() < k)
+                return quickSelect(small, k - nums.size() + small.size());
+            // 第 k 大元素在 equal 中，直接返回 pivot
+            return pivot;
+        }
+
+        public int findKthLargest3(int[] nums, int k) {
+            List<Integer> numList = new ArrayList<>();
+            for (int num : nums) {
+                numList.add(num);
+            }
+            return quickSelect(numList, k);
+        }
 
 }
