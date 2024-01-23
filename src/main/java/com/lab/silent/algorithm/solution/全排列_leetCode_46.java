@@ -58,4 +58,36 @@ public class 全排列_leetCode_46 {
             path.removeLast();
         }
     }
+
+    public List<List<Integer>> allMatch(int[] nums){
+        //申明匹配列
+        List<Integer> path = new LinkedList<>();
+        //申明最终返回结果
+        List<List<Integer>> res = new ArrayList<>();
+        //记录选择过程中是否选择
+        boolean[] used = new boolean[nums.length];
+        //回溯获取组合结果
+        backTrack(nums,used,path,res);
+        return res;
+    }
+    public void backTrack(int[] nums,boolean[] used,List<Integer> path,List<List<Integer>> res){
+        //记录满足条件的解
+        if(path.size() == nums.length){
+            res.add(new ArrayList<>(path));
+            return;
+        }
+        //遍历所有的组合方式
+        for (int i = 0; i < nums.length; i++) {
+            //剪枝: 如果组合中包含重复数据则跳过
+            if(used[i]){continue;}
+            //记录不重复的数字路径
+            path.add(nums[i]);
+            used[i] = true;
+            //进入下一次递归
+            backTrack(nums,used,path,res);
+            //回溯上次的选择
+            path.removeLast();
+            used[i] = false;
+        }
+    }
 }

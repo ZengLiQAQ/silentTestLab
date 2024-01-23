@@ -23,27 +23,35 @@ public class MyTest_手写快排 {
      * @param right 右指针
      */
     public static void  quickSort(int[] arr,int left, int right){
-        if(left < right){
-            //找到当前子数组的基准值
-            int partitionIndex = partition(arr, left, right);
-            //排序左边的数组
-            quickSort(arr, left, partitionIndex - 1);
-            //排序右边的数组
-            quickSort(arr, partitionIndex + 1, right);
-        }
+        if(left >= right) return;
+        //找到当前子数组的基准值
+        int p = partition(arr, left, right);
+        //排序左边的数组
+        quickSort(arr, left, p - 1);
+        //排序右边的数组
+        quickSort(arr, p + 1, right);
     }
 
+    /**
+     * 基准值划分
+     * @param arr
+     * @param left
+     * @param right
+     * @return
+     */
     public static int partition(int[] arr,int left, int right){
-        int pivot = left;
-        int index = pivot + 1;
-        for (int i = index; i <= right; i++) {
-            if (arr[i] < arr[pivot]) {
-                swap(arr, i, index);
-                index++;
-            }
+        int i = left,j = right;
+        while (i<j){
+            //从右往左找小于基准值的元素
+            while (i<j && arr[j]>=arr[left]) j--;
+            //从左右大于基准值的元素
+            while (i<j && arr[i] <= arr[left]) i++;
+            //交换元素
+            swap(arr,i,j);
         }
-        swap(arr, pivot, index - 1);
-        return index - 1;
+        //交换基准值到两个子数组的分界线
+        swap(arr,i,left);
+        return i;
     }
 
     public static void swap(int[] arr,int i,int j){
