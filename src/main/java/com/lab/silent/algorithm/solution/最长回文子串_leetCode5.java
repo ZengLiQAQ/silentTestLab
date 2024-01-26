@@ -67,15 +67,48 @@ public class 最长回文子串_leetCode5 {
             --left;
             ++right;
         }
-        return  right - left + 1;
+        return  right - left - 1;
     }
 
+    //中心扩散法计算
+    public static  String longestPalindrome3(String s) {
+        //子数组临时左右索引位置
+        int left = 0; int right = 0;
+        //遍历字符,依次计算最长子数组长度
+        for(int i = 0 ;i< s.length();i++){
+            //奇数回文
+            int len1 = ex(s,i,i);
+            //偶数回文
+            int len2 = ex(s,i,i+1);
+            //当前两个场景下最长的子串长度
+            int max = Math.max(len1,len2);
+            //与之前的最大子串长度对比
+            if(max > (right - left)){
+                left = i - (max-1)/2;
+                right = i + max/2;
+            }
+        }
+        return s.substring(left,right+1);
+    }
+
+    //验证指定子数组是否是回文,返回长度
+    public static int ex(String s,int left,int right){
+        while(left>=0 && right<s.length() && s.charAt(left) == s.charAt(right)){
+            --left;
+            ++right;
+        }
+        return right - left - 1;
+    }
     public static void main(String[] args) {
         String s = "asdfggfdsj";
         String r = longestPalindrome(s);
+        String t = longestPalindrome3(s);
         System.out.println(r);
+        System.out.println(t);
         String s2 = "asdfgfdsj";
         String r2 = longestPalindrome(s2);
+        String r3 = longestPalindrome3(s2);
         System.out.println(r2);
+        System.out.println(r3);
     }
 }
